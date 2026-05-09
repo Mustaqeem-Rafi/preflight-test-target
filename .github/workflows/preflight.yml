@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: Javeria-taj/preflight-ai@v1.0.0
+      - uses: Javeria-taj/preflight-ai/preflight-action@v1.0.0
         with:
           api_url: 'https://preflight-ai.onrender.com'
           fail_on_block: 'false'
