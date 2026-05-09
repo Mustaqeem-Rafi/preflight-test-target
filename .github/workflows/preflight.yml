@@ -1,0 +1,24 @@
+name: Preflight Supply Chain Scan
+
+on:
+  pull_request:
+    paths:
+      - 'package-lock.json'
+
+permissions:
+  pull-requests: write
+  statuses: write
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: Javeria-taj/preflight-ai@v1.0.0
+        with:
+          api_url: 'https://preflight-ai.onrender.com'
+          fail_on_block: 'false'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
