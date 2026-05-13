@@ -1,5 +1,9 @@
 # preflight-test-target
 
+## Description
+
+This repository is a demo target for validating Preflight supply chain security scanning in GitHub Actions.
+
 Demo repository for [Preflight](https://github.com/Javeria-taj/preflight-ai) supply chain security scanning.
 
 This repo demonstrates Preflight catching the axios supply chain attack (March 31, 2026) in a real CI/CD pipeline.
